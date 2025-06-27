@@ -1,8 +1,8 @@
-package blockcanary
+package com.blockcanary
 
 import java.util.concurrent.Executors
 
-class SlowMessageNotifyHandler :SlowMessageHandler{
+class SlowMessageNotifyHandler : SlowMessageHandler {
 
     private val executors = Executors.newSingleThreadExecutor()
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="blockcanary">
+    package="com.blockcanary">
 
     <application>
         <provider
@@ -8,7 +8,7 @@
             android:authorities="${applicationId}.androidx-startup"
             android:exported="false">
             <meta-data
-                android:name="blockcanary.BlockCanaryStartupInitializer"
+                android:name="com.blockcanary.BlockCanaryStartupInitializer"
                 android:value="@string/androidx_startup" />
         </provider>
     </application>

@@ -1,10 +1,13 @@
 package blockcanary.ui
 
 import blockcanary.*
+import com.blockcanary.BlockCanary
+import com.blockcanary.BlockDetectListener
+import com.blockcanary.BlockInfo
 
 object BlockCanaryUI : BlockDetectListener {
 
-    private val application =BlockCanary.applicationContext()
+    private val application = BlockCanary.applicationContext()
 
     init {
         BlockCanary.addBlockDetectListener(this)

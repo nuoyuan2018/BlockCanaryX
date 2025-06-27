@@ -1,4 +1,4 @@
-package blockcanary
+package com.blockcanary
 
 import android.util.Log
 

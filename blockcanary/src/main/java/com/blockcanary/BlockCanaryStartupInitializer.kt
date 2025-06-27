@@ -1,4 +1,4 @@
-package blockcanary
+package com.blockcanary
 
 import android.app.Application
 import android.content.Context
@@ -13,8 +13,7 @@ internal class BlockCanaryStartupInitializer : Initializer<BlockCanaryStartupIni
         val autoInstall = application.resources.getBoolean(R.bool.block_canary_auto_install)
         if (autoInstall){
             val blockCanaryConfig = BlockCanaryConfig.newBuilder().build()
-            BlockCanary
-                .install(application,blockCanaryConfig)
+            BlockCanary.install(application, blockCanaryConfig)
         }
     }
 

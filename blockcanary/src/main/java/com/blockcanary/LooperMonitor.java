@@ -1,4 +1,4 @@
-package blockcanary;
+package com.blockcanary;
 
 import android.os.Build;
 import android.os.Looper;

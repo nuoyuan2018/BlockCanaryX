@@ -1,9 +1,9 @@
-package blockcanary.db
+package com.blockcanary.db
 
 import android.content.Context
 import android.content.SharedPreferences
 import com.google.gson.Gson
-import blockcanary.BlockInfo
+import com.blockcanary.BlockInfo
 import java.io.File
 import java.io.FilenameFilter
 import java.util.concurrent.ExecutorService

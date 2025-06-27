@@ -1,4 +1,4 @@
-package blockcanary
+package com.blockcanary
 
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors

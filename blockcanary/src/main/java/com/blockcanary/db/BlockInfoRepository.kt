@@ -1,6 +1,6 @@
-package blockcanary.db
+package com.blockcanary.db
 
-import blockcanary.BlockInfo
+import com.blockcanary.BlockInfo
 
 interface BlockInfoRepository {
     fun insertBlockInfo(blockInfo: BlockInfo)

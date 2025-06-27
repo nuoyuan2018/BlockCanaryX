@@ -1,13 +1,14 @@
-package blockcanary
+package com.blockcanary
 
 import android.annotation.SuppressLint
 import android.app.Application
-import blockcanary.db.BlockInfoRepository
+import com.blockcanary.db.BlockInfoRepository
 
 @SuppressLint("StaticFieldLeak")
 object BlockCanary {
 
-    fun install(app: Application, config: BlockCanaryConfig) = BlockCanaryInternal.install(app, config)
+    fun install(app: Application, config: BlockCanaryConfig) =
+        BlockCanaryInternal.install(app, config)
 
     fun start() = BlockCanaryInternal.start()
 

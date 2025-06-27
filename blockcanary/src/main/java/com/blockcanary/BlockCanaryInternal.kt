@@ -1,9 +1,9 @@
-package blockcanary
+package com.blockcanary
 
 import android.app.Application
 import android.os.*
-import blockcanary.db.BlockInfoRepository
-import blockcanary.db.BlockInfoRepositoryImpl
+import com.blockcanary.db.BlockInfoRepository
+import com.blockcanary.db.BlockInfoRepositoryImpl
 import com.knightboost.stacksampler.StackSampler
 import com.knightboost.stacksampler.util.FastTimer
 import java.io.File
@@ -54,17 +54,17 @@ internal object BlockCanaryInternal {
         }
 
     fun install(app: Application, config: BlockCanaryConfig) {
-        if (this._application != null) {
+        if (_application != null) {
             //already installed
             return
         }
-        this._application = app
-        this._blockCanaryConfig = config
-        var tempFile =application.cacheDir
+        _application = app
+        _blockCanaryConfig = config
+        var tempFile = application.cacheDir
         if(!config.logPath.isNullOrEmpty() ){
             tempFile = File(config.logPath)
         }
-        this.blockInfoRepository = BlockInfoRepositoryImpl(
+        blockInfoRepository = BlockInfoRepositoryImpl(
             application, Executors.newSingleThreadExecutor(),
             File(tempFile, "blockCanary")
         )

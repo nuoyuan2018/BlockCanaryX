@@ -1,4 +1,4 @@
-package blockcanary
+package com.blockcanary
 
 import com.knightboost.stacksampler.StackTraceSample
 

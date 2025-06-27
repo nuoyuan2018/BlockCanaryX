@@ -11,6 +11,9 @@ import androidx.appcompat.app.AppCompatActivity
 import blockcanary.ui.util.SimpleListAdapter
 import blockcanary.ui.util.TimeFormatter
 import blockcanary.*
+import com.blockcanary.BlockCanary
+import com.blockcanary.BlockInfo
+import com.blockcanary.CanaryExecutors
 import com.knightboost.flamegraph.FlameGraphActivity
 import com.knightboost.stacksampler.util.FlameGraphUtil
 import java.io.File
