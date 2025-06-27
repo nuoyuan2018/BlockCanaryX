@@ -60,9 +60,13 @@ internal object BlockCanaryInternal {
         }
         this._application = app
         this._blockCanaryConfig = config
+        var tempFile =application.cacheDir
+        if(!config.logPath.isNullOrEmpty() ){
+            tempFile = File(config.logPath)
+        }
         this.blockInfoRepository = BlockInfoRepositoryImpl(
             application, Executors.newSingleThreadExecutor(),
-            File(application.cacheDir, "blockCanary")
+            File(tempFile, "blockCanary")
         )
         initUICore()
         start()
