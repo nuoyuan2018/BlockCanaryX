@@ -30,6 +30,11 @@ public class BlockCanaryConfig {
      */
     private boolean detectWhenDebuggerConnected;
 
+    /**
+     * log文件的存储路径
+     */
+    private String logPath;
+
     private BlockCanaryConfig(Builder builder) {
         setBlockThresholdTime(builder.blockThresholdTime);
         setBlockMaxThresholdTime(builder.blockMaxThresholdTime);
@@ -37,6 +42,15 @@ public class BlockCanaryConfig {
         setMaxStackSampleCacheCount(builder.maxStackSampleCacheCount);
         setMaxCacheBlockingFiles(builder.maxCacheBlockingFiles);
         setDetectWhenDebuggerConnected(builder.detectWhenDebuggerConnected);
+        this.logPath = builder.logPath;
+    }
+
+    public String getLogPath() {
+        return logPath;
+    }
+
+    public void setLogPath(String logPath) {
+        this.logPath = logPath;
     }
 
     public static Builder newBuilder() {
@@ -51,6 +65,7 @@ public class BlockCanaryConfig {
         builder.maxStackSampleCacheCount = copy.getMaxStackSampleCacheCount();
         builder.maxCacheBlockingFiles = copy.getMaxCacheBlockingFiles();
         builder.detectWhenDebuggerConnected = copy.isDetectWhenDebuggerConnected();
+        builder.logPath = copy.getLogPath();
         return builder;
     }
 
@@ -110,6 +125,7 @@ public class BlockCanaryConfig {
         private int maxStackSampleCacheCount=110;
         private int maxCacheBlockingFiles = 50;
         private boolean detectWhenDebuggerConnected = false;
+        private String logPath;
 
         private Builder() {
         }
@@ -142,6 +158,11 @@ public class BlockCanaryConfig {
 
         public Builder detectWhenDebuggerConnected(boolean val) {
             detectWhenDebuggerConnected = val;
+            return this;
+        }
+
+        public Builder logPath(String val) {
+            logPath = val;
             return this;
         }
 
